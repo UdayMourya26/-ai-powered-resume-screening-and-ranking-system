@@ -6,12 +6,12 @@ import matplotlib.pyplot as plt
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# 🎨 **Custom CSS for a Beautiful UI**
+
 st.markdown("""
     <style>
     body {
         background-color: #121212;
-        color: white;
+        color: red;
     }
     .stApp {
         background-color: #1E1E1E;
@@ -19,18 +19,18 @@ st.markdown("""
     h1 {
         text-align: center;
         color: #4CAF50;
-        font-size: 36px;
+        font-size: 30px;
         font-weight: bold;
     }
     .stTextArea, .stFileUploader {
-        border-radius: 10px;
+        border-radius: 12px;
         box-shadow: 0 0 10px #4CAF50;
     }
     .stButton>button {
         background-color: #4CAF50;
         color: white;
         padding: 12px 18px;
-        font-size: 18px;
+        font-size: 20px;
         border-radius: 8px;
         border: none;
         transition: 0.3s;
@@ -45,7 +45,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 📌 **Page Title**
+#  **Page Title**
 st.title("🚀 Resume Ranking System")
 
 col1, col2 = st.columns(2)
@@ -58,13 +58,13 @@ with col2:
     st.header("📝 Job Description")
     job_description = st.text_area("Enter the job description...")
 
-# 📌 **Extract Text from PDF Resumes**
+# **Extract Text from PDF Resumes**
 def extract_text_from_pdf(file):
     pdf = PdfReader(file)
     text = "".join([page.extract_text() or "" for page in pdf.pages])
     return text.strip()
 
-# 📌 **Rank Resumes Using TF-IDF & Cosine Similarity**
+#  **Rank Resumes Using TF-IDF & Cosine Similarity**
 def rank_resumes(job_description, resumes):
     documents = [job_description] + resumes
     vectorizer = TfidfVectorizer().fit_transform(documents)
@@ -73,7 +73,7 @@ def rank_resumes(job_description, resumes):
     resume_vectors = vectors[1:]
     return cosine_similarity([job_desc_vector], resume_vectors).flatten()
 
-# 📌 **AI Suggestions for Resume Improvement**
+#  **AI Suggestions for Resume Improvement**
 def generate_resume_tips(score):
     if score > 80:
         return "🔥 Excellent match! Your resume is well-optimized."
@@ -82,7 +82,7 @@ def generate_resume_tips(score):
     else:
         return "⚡ Low match! Try improving your skills section and adding industry-specific terms."
 
-# 📌 **Start Ranking Process**
+#  **Start Ranking Process**
 if uploaded_files and job_description:
     st.header("📊 Resume Rankings")
 
