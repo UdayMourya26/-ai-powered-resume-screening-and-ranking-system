@@ -24,11 +24,14 @@ The **Resume Ranking System** is an AI-driven tool designed to simplify and opti
 
 ## 📷 Screenshots
 ### Upload Resumes & Enter Job Description
-![Upload Resume](./screenshots/upload.png)
-![Upload Resume](./screenshots/resumeupload.png)
+![upload](https://github.com/user-attachments/assets/4b23a971-11a5-485d-b7c9-de4efc46a5ad)
+
+![resumeupload](https://github.com/user-attachments/assets/f1954128-62cc-46fe-ac54-291787e5c1e9)
+
 
 ### Resume Ranking Results
-![Resume Ranking](./screenshots/screening.png)
+![screening](https://github.com/user-attachments/assets/437fbdde-fb5d-4ec0-a245-7a2a343b622b)
+
 
 ## 🏗️ Installation & Setup
 ### Clone the Repository
