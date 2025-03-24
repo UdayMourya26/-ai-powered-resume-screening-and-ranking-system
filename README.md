@@ -61,8 +61,7 @@ streamlit run app.py
 - ✅ Advanced AI-based skill extraction
 - ✅ Cloud-based deployment
 
-## 💡 Contributing
-Contributions are welcome! Feel free to fork this repo and submit a pull request.
+
 
 
 ---
